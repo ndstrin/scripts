@@ -2,7 +2,7 @@
 cd ..
 
 # Sets the Working Folder and Time Stamp Variables
-$USB_drive = (Get-WmiObject Win32_Volume -Filter 'label = "VDA1"').name
+$USB_drive = (Get-WmiObject Win32_Volume -Filter 'label = "VDA_01"').name
 $folderDateTime = (get-date).ToString('M-d-yyyy HHmmss')
 $userDir = $USB_drive + 'Reports\VDA_1_' + $folderDateTime
 $fileSaveDir = New-Item  ($userDir) -ItemType Directory 
